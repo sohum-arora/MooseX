@@ -13,5 +13,7 @@ classDiagram
         - Maybe put PID systems for runToVel if needed?
         +setPower methods
     }
-    class 
+    class MecanumDrivetrain {
+        impl: Drivetrain
+    }
 ```
