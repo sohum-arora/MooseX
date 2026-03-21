@@ -115,3 +115,13 @@ classDiagram
     Localizer <|.. OTOSLocalizer : OTOS - idk if we doing it
     Localizer <--* PoseTracker : External Affairs.
 ```
+
+## Higher Level Core Hierarchy
+```mermaid
+graph Core
+    subgraph DriveTrain
+        DT[DriveTrain inf]
+        MC[Mecanum DriveTrain]
+        TK[Tank Drivetrain]
+        SW[Swerve Drivetrain]
+```
