@@ -2,6 +2,8 @@ package com.xpathing.util.math
 
 
 import kotlin.math.PI
+import kotlin.math.cos
+import kotlin.math.sin
 import kotlin.math.sqrt
 
 
@@ -176,6 +178,26 @@ data class Pose(
         if (a > PI) a -= 2 * PI
         if (a <= -PI) a += 2 * PI
         return a
+
+    }
+    fun rotate(angle: Double): Pose {
+        val cosA = cos(angle)
+        val sinA = sin(angle)
+        return Pose(
+            x * cosA - y * sinA,
+            x * sinA + y * cosA,
+            normalize(heading + angle),
+            _coordSystem = Vector.coordSys
+        )
+    }
+    object coordSys : CoordinateSystem {
+        override fun toApexCoordinates(pose: Pose): Pose {
+            TODO("Not yet implemented")
+        }
+
+        override fun fromApexCoordinates(pose: Pose): Pose {
+            TODO("Not yet implemented")
+        }
 
     }
 }
