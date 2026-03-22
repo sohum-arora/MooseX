@@ -67,14 +67,7 @@ public class HolonomicTrajectoryFollower {
         double worldVX = feedbackX + feedforwardX + centripetalX;
         double worldVY = feedbackY + feedforwardY + centripetalY;
 
-        // Transform world velocity to robot-relative velocity
-        double cos = Math.cos(currentPose.heading());
-        double sin = Math.sin(currentPose.heading());
-
-        double robotVX = worldVX * cos + worldVY * sin;
-        double robotVY = -worldVX * sin + worldVY * cos;
-
-        return new Pose(robotVX, robotVY, feedbackTheta + feedforwardTheta);
+        return new Pose(worldVX, worldVY, feedbackTheta + feedforwardTheta);
     }
 
     private double normalizeAngle(double angle) {

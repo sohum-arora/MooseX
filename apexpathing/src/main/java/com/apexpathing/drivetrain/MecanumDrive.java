@@ -78,7 +78,16 @@ public class MecanumDrive extends CustomDrive {
 
     @Override
     public void setDrivePowers(Pose drivePowers) {
-        botCentricDrive(drivePowers.x(), drivePowers.y(), drivePowers.heading());
+        Pose currentPose = getPose();
+        double heading = currentPose.heading();
+
+        double cos = Math.cos(heading);
+        double sin = Math.sin(heading);
+
+        double x = drivePowers.x() * cos + drivePowers.y() * sin;
+        double y = -drivePowers.x() * sin + drivePowers.y() * cos;
+
+        botCentricDrive(x, y, drivePowers.heading());
     }
 
     public void botCentricDrive(double x, double y, double turn) {
