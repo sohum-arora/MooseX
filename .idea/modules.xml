@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/MooseX-master (1).iml" filepath="$PROJECT_DIR$/.idea/MooseX-master (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MooseX.iml" filepath="$PROJECT_DIR$/.idea/modules/MooseX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FtcRobotController/MooseX.FtcRobotController.iml" filepath="$PROJECT_DIR$/.idea/modules/FtcRobotController/MooseX.FtcRobotController.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FtcRobotController/MooseX.FtcRobotController.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/FtcRobotController/MooseX.FtcRobotController.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FtcRobotController/MooseX.FtcRobotController.main.iml" filepath="$PROJECT_DIR$/.idea/modules/FtcRobotController/MooseX.FtcRobotController.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FtcRobotController/MooseX.FtcRobotController.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/FtcRobotController/MooseX.FtcRobotController.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TeamCode/MooseX.TeamCode.iml" filepath="$PROJECT_DIR$/.idea/modules/TeamCode/MooseX.TeamCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TeamCode/MooseX.TeamCode.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/TeamCode/MooseX.TeamCode.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TeamCode/MooseX.TeamCode.main.iml" filepath="$PROJECT_DIR$/.idea/modules/TeamCode/MooseX.TeamCode.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TeamCode/MooseX.TeamCode.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/TeamCode/MooseX.TeamCode.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/apexpathing/MooseX.apexpathing.iml" filepath="$PROJECT_DIR$/.idea/modules/apexpathing/MooseX.apexpathing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/apexpathing/MooseX.apexpathing.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/apexpathing/MooseX.apexpathing.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/apexpathing/MooseX.apexpathing.main.iml" filepath="$PROJECT_DIR$/.idea/modules/apexpathing/MooseX.apexpathing.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/apexpathing/MooseX.apexpathing.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/apexpathing/MooseX.apexpathing.unitTest.iml" />
     </modules>
   </component>
 </project>

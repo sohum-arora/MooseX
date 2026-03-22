@@ -1,8 +1,8 @@
 package com.apexpathing.localization
 
-
-import com.apexpathing.geometry.Vector
+import com.apexpathing.util.math.ApexCoordinates
 import com.apexpathing.util.math.Pose
+import com.apexpathing.util.math.Vector
 import com.qualcomm.robotcore.hardware.HardwareMap
 
 /**
@@ -16,10 +16,10 @@ abstract class LocalizerBase() {
     // Add the @Pathing annotation stuff here
 
     // Stores the last position so that way we can calculate velocity
-    var lastPosition: Pose = Pose(0.0,0.0,0.0, _coordSystem = Vector.coordSys)
+    var lastPosition: Pose = Pose(0.0,0.0,0.0, _coordSystem = ApexCoordinates)
     // Stores the last velocity so that way we can calculate acceleration
     var lastVelocity: Vector = Vector(0.0,0.0)
-    var currentPosition: Pose = Pose(0.0,0.0,0.0, _coordSystem = Vector.coordSys)
+    var currentPosition: Pose = Pose(0.0,0.0,0.0, _coordSystem = ApexCoordinates)
     var currentVelocity: Vector = Vector(0.0,0.0)
     var currentAcceleration: Vector = Vector(0.0,0.0)
 
