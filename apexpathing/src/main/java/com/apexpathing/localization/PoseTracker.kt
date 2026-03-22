@@ -6,15 +6,15 @@ import com.apexpathing.util.math.Vector
 
 class PoseTracker
     constructor(
-        localizer: Localizer
+        localizer: L
     )
 {
     init {
         localizer.resetIMU()
     }
     @get:JvmName("startPose")
-    @set:JvmName("setStartPose")
     var startPose: Pose = Pose(0.0,0.0,0.0, ApexCoordinates)
+        private set
 
     @get:JvmName("prevPose")
     var prevPose: Pose = startPose.copy()
@@ -43,6 +43,9 @@ class PoseTracker
     @get:JvmName("yOffset")
     @set:JvmName("yOffset")
     var yOffset: Double = 0.0
+    @get:JvmName("headingOffset")
+    @set:JvmName("headingOffset")
+    var headingOffset: Double = 0.0
 
     @get:JvmName("prevPoseTimeStamp")
     var prevPoseTimeStamp: Long = 0
@@ -51,8 +54,14 @@ class PoseTracker
     var currPoseTimeStamp: Long = 0
         private set
 
+    fun setStartPose(startPose: Pose) {
+        this.startPose = startPose
+        this.prevPose = startPose.copy()
+
+    }
+
 }
 
-interface Localizer {
+interface L {
     fun resetIMU()
 }
