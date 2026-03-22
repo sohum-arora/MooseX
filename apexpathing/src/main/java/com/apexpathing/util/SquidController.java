@@ -57,14 +57,19 @@ public class SquidController {
         derivative = (error - lastError) / deltaTime;
         double kDOut = kD * derivative;
 
-
+        //reset vars
         lastTimestamp = timestamp;
         lastError = error;
 
+        //power variable for ease of calculation
+        final double power = kPOut + kIOut + kDOut;
+
         //deadband, turns the motors off when the power is too slow to move the robot
-        if(Math.abs(kP + kI + kDOut) < deadBand){
+        if(Math.abs(power) < deadBand){
             return 0;
         }
-        return kPOut + kIOut + kDOut ;
+
+        //limit power to -1, and 1 for safety
+        return Math.max(-1.0, Math.min(1.0, power));
     }
 }
