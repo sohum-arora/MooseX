@@ -1,0 +1,22 @@
+package org.firstinspires.ftc.teamcode.apexPathing.tuners
+
+import com.apexpathing.drivetrain.MecanumDrive
+import com.qualcomm.robotcore.eventloop.opmode.OpMode
+import org.firstinspires.ftc.teamcode.apexPathing.Constants.dtConstants
+
+/**
+ * @author Atharv Gurnani - 13085 Bionic Dutch
+ */
+class ForwardVelocityTuner: OpMode() {
+    private val dist = 40;
+    private lateinit var drive : MecanumDrive;
+    override fun init() {
+        drive = MecanumDrive(hardwareMap, dtConstants)
+        drive.initDriveTrain()
+    }
+
+    override fun loop() {
+        drive.botCentricDrive(0.0, 1.0, 0.0)
+    }
+
+}
