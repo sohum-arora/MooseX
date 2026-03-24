@@ -11,6 +11,7 @@ import com.apexpathing.util.math.Pose
 /**
  * GoBilda Pinpoint odometry localizer
  * @Author Sohum Arora 22985
+ * TODO: Add StartingPose logic
  */
 class PinpointLocalizer(
     private val hardwareMap: HardwareMap,
