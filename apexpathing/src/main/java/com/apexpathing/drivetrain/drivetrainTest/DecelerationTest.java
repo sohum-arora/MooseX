@@ -22,7 +22,6 @@ import java.util.List;
  *      If coast distance is too large, enable BRAKE mode in your drivetrain.
  *
  * @author Sohum Arora 22985 Paraducks
- * @author Simon Gidrewics 31663 RSR Cuttlefish
  */
 @TeleOp(name = "Deceleration Test", group = "ApexPathing Tuning")
 public class DecelerationTest extends LinearOpMode {
@@ -30,7 +29,6 @@ public class DecelerationTest extends LinearOpMode {
     public static double timeout = 5.0;   // max seconds to wait for stop
     public static double stopThreshold = 50.0;  // ticks/sec — "stopped"
     private Drivetrain drivetrain;
-    private boolean running;
 
     @Override
     public void runOpMode() {
@@ -49,10 +47,8 @@ public class DecelerationTest extends LinearOpMode {
         double coastTimeResult = 0;
 
         while (opModeIsActive()) {
-            if (gamepad1.aWasPressed()) {
-                running = !running;
-            }
-            if (running) {
+
+            if (gamepad1.a) {
 
                 // Phase 1: Accelerate
                 ElapsedTime timer = new ElapsedTime();
