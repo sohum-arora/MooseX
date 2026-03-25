@@ -1,6 +1,5 @@
 package com.apexpathing.follower.ThreeWheelFollowers;
 
-import com.apexpathing.drivetrain.MecanumDrive;
 
 import com.apexpathing.localization.ThreeWheelLocalizer;
 import com.apexpathing.util.math.Pose;
